@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+
+body {
+  background: #F5F5F5;
+  padding: 3em;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #000;
+  text-align: center;
+}
+
+.custom-select select {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000;
+  }
+  
+  .custom-button {
+    background-color: #FFFFFF;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #E6E6E6;
+  }
+  
+  table.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:15px;
+    text-align: center;
+  }
+  
+  th {
+    color: white;
+    background-color: #1B2D90;
+  }
+  
+  .custom-input-div {
+    padding: 5px;
+  }
+  
+  .div-boton-suscribirse {
+    padding-top: 5px;
+  }
+  
+  .boton-suscribirse {
+    background-color: #FFFFFF;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+ul{
+    text-align: left;
+    list-style-type: none;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 100px;
+}
+
+ul li a {
+    font-size: 1.5em;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
