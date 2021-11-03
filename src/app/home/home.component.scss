@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+h1 {
+    text-align: left;
+    margin-left: 200px;
+}
+
+header {
+    background: #5c8dc7;
+}
+
+.parrafo-bienvenida {
+    font-size: 20px;
+    text-align: left;
+    margin-left: 200px;
+}
+
+.input_usuario {
+    text-align: right;
+    //margin-right: 100px;
+    margin: 20px 100px 20px  0;
+}
+
+.cajas_input {
+    margin: 10px;
+}
+
+#button-login {
+    text-align: center;
+    padding-left: 23px;
+    padding-right: 23px;
+    display: inline-block;
+    
+}
+
+.usuario-button{
+    text-align: center;
+    padding: 10px;
+    background-color: #FFFFFF;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000;
+}
+
+.imagenes{
+    //padding: 800px;
+}
