@@ -16,11 +16,6 @@ class Equipo{
 export class HomeComponent implements OnInit {
 
   infoTabla: any;
-  equipo1: any;
-
-  logosArray: Array<any> = [];
-  nombresArray: Array<any> = [];
-  puntosArray: Array<any> = [];
   arrayEquipos: Array<Equipo> = [];
 
   constructor(private service: ServicioApiSoccerService) { 
@@ -41,13 +36,9 @@ export class HomeComponent implements OnInit {
         this.arrayEquipos[i].logo = data.response[0].league.standings[0][i].team.logo;
         this.arrayEquipos[i].equipo_nombre = data.response[0].league.standings[0][i].team.name;
         this.arrayEquipos[i].puntos = data.response[0].league.standings[0][i].points;
-        //this.logosArray[i] = data.response[0].league.standings[0][i].team.logo;
-        //this.nombresArray[i] = data.response[0].league.standings[0][i].team.name;
-        //this.puntosArray[i] = data.response[0].league.standings[0][i].points;
       }
 
       console.log(data);
-      console.log(this.equipo1);
     });
   }
 
