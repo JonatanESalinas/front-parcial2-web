@@ -1,0 +1,22 @@
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.custom-select{
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000;
+}
+
+.custom-button{
+    text-align: center;
+    padding: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #000;
+}
