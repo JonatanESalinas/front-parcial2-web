@@ -4,13 +4,12 @@
             <div class="column">
                 <h1>Fut Alert</h1>
                 <p class="parrafo-bienvenida">
-                    Bienvenido {{user}}. 
+                    Bienvenido {{userLogeado}}. 
                 </p>
             </div>
             <div class="column">
                 <div class="input_usuario"> 
                     <input class="cajas_input" type="text" id="username_input" placeholder="Usuario" [(ngModel)]="user">
-                    <!-- <button id="button-login" class="usuario-button">Login</button>  -->
                     <input type="submit" id="button-login" class="usuario-button" value="Login" (click)="loginUser()">  
                 </div>
                 <div class="input_usuario">

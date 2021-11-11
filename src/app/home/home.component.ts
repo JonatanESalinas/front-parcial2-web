@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   arrayEquipos: Array<Equipo> = [];
 
   user: string = ""
+  userLogeado: string = ""
   pass: string = ""
   token: string = ""
 
@@ -52,7 +53,7 @@ export class HomeComponent implements OnInit {
 
   loginUser() {
 
-    alert(this.user + " - " + this.pass);
+    //alert(this.user + " - " + this.pass);
     this.graphqlUsersService.tokenAuth(this.user, this.pass)
     .subscribe(({ data }) => {
        console.log('logged: ', JSON.stringify(data));
@@ -60,7 +61,7 @@ export class HomeComponent implements OnInit {
       //this.storageService.setLocal("token", JSON.parse(JSON.stringify(data)).tokenAuth.token);
       this.token =  JSON.parse(JSON.stringify(data)).tokenAuth.token;
       
-
+      this.userLogeado = this.user;
       //this.loginService.showData(mydata);
       // this.router.navigate(['/']);
 
