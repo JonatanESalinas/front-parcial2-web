@@ -4,19 +4,20 @@
             <div class="column">
                 <h1>Fut Alert</h1>
                 <p class="parrafo-bienvenida">
-                    Bienvenido. 
+                    Bienvenido {{userLogeado}}. 
                 </p>
             </div>
             <div class="column">
                 <div class="input_usuario"> 
-                    <input class="cajas_input" type="text" id="username_input" placeholder="Usuario">
-                    <button id="button-login" class="usuario-button">Login</button>    
+                    <input class="cajas_input" type="text" id="username_input" placeholder="Usuario" [(ngModel)]="user">
+                    <input type="submit" id="button-login" class="usuario-button" value="Login" (click)="loginUser()">  
                 </div>
                 <div class="input_usuario">
-                    <input class="cajas_input" type="text" id="password_input" placeholder="Password">
+                    <input class="cajas_input" type="password" id="password_input" placeholder="Password" [(ngModel)]="pass">
                     <a routerLink="/registro"> <button class="usuario-button">Regístrate</button> </a>
                   </div> 
             </div>
+            {{ token }}
         </div>
       </header>
       
