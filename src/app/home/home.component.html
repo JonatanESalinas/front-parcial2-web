@@ -1,0 +1,94 @@
+<body>
+    <header>
+        <div class="row">
+            <div class="column">
+                <h1>Fut Alert</h1>
+                <p class="parrafo-bienvenida">
+                    Bienvenido {{userLogeado}}. 
+                </p>
+            </div>
+            <div class="column">
+                <div class="input_usuario"> 
+                    <input class="cajas_input" type="text" id="username_input" placeholder="Usuario" [(ngModel)]="user">
+                    <input type="submit" id="button-login" class="usuario-button" value="Login" (click)="loginUser()">  
+                </div>
+                <div class="input_usuario">
+                    <input class="cajas_input" type="password" id="password_input" placeholder="Password" [(ngModel)]="pass">
+                    <a routerLink="/registro"> <button class="usuario-button">Regístrate</button> </a>
+                  </div> 
+            </div>
+            {{ token }}
+        </div>
+      </header>
+      
+      <ul>
+        <li><a routerLink="">Home</a></li>
+        <li><a routerLink="configuracion">Configuración</a></li>
+        <li><a routerLink="caliente">Caliente.mx</a></li>
+      </ul>
+
+    <main>
+        <section>
+            <!--Tabla general-->
+            <h2>Tabla general</h2>
+    
+            <table id="tabla_general" class="center">
+                <tr>
+                    <th>Posición</th>
+                    <th>Logo</th>
+                    <th>Nombre</th>
+                    <th>Puntos</th>
+                </tr>
+                <tr *ngFor="let equipo of arrayEquipos">
+                    <td> {{ equipo.posicion }} </td>
+                    <td> <img id="logo_id" src="{{ equipo.logo }}" width="50" alt=""></td>
+                    <td id="nombre_id"> {{equipo.equipo_nombre}} </td>
+                    <td id="puntos_id"> {{equipo.puntos}} </td>
+                </tr>
+            </table>              
+        </section>
+        <section>
+            <!--Informacion equipos-->
+    <h2 align="center">Información de tu equipo favorito</h2>
+        <p align="center">Regístrate para seguir de cerca a tu equipo favorito.</p>
+        <div class="custom-select" align="center">    
+              <h3><div id="nEquipo"></div></h3>
+              <div> <img id="logoEquipo" src="" alt=""> </div>
+              <div id="fundacion"></div>
+              <div id="estadio"></div>
+              <div id="capacidad"></div>
+             <div id="ciudad"></div>
+              <div> <img id="logoEstadio" src="" alt=""> </div>
+    </div>
+        </section>
+        <section>
+            <!--contacto-->
+            <h2>Galería</h2>
+            <img class="imagenes" id="imag1" width="350" src="">
+            <img class="imagenes" id="imag1" width="320" src="">
+            <img class="imagenes" id="imag1" width="380" src="">
+        
+            <!--
+                Link imag1:
+                    https://naciondeportes.com/wp-content/uploads/2021/08/jornada-7-torneo-grita-mexico-a21-liga-mx.jpeg
+                Link imag2:
+                    https://as01.epimg.net/mexico/imagenes/2021/08/19/futbol/1629398381_624156_1629398741_sumario_normal.jpg
+                Link imag3:
+                    https://as01.epimg.net/mexico/imagenes/2020/08/31/futbol/1598833156_421256_1598843557_noticia_normal_recorte1.jpg
+
+            -->
+
+        </section>
+    </main>
+    <footer>
+        <!--Acerca de-->
+        <h2 align="center">Acerca de</h2>
+        <p align="center">Esta página web fue creada y diseñada por:<br>
+        Víctor Darío Alor López A01731643<br>
+        Jesús Orlando Rodríguez Ramírez A01731627<br>
+        Jonatan Emanuel Salinas Ávila A01731815<br>
+        Carlos Ignacio Villalobos Sánchez A01731</p>
+        <p align="center">Proyecto Segundo Parcial - Desarrollo de aplicaciones web</p>
+    </footer>
+</body>
+
