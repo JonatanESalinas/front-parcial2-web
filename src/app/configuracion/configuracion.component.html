@@ -38,27 +38,28 @@
 	<div class="column">
 		<h2> Elegir mi equipo favorito </h2>
 		<div class="custom-select" align="center">
-			<select name="equipos" id="equipo">
-					<option align="center" value="2287">América</option>
-        	<option align="center" value="2283">Atlas</option>
-        	<option align="center" value="2314">Atlético de San Luis</option>
-    			<option align="center" value="2295">Cruz Azul</option>
-    			<option align="center" value="2278">Guadalajara</option>
-    			<option align="center" value="2298">Juárez</option>
-    			<option align="center" value="2289">León</option>
-    			<option align="center" value="14002">Mazatlán</option>
-    			<option align="center" value="2282">Monterrey</option>
-    			<option align="center" value="2288">Necaxa</option>
-    			<option align="center" value="2292">Pachuca</option>
-    			<option align="center" value="2291">Puebla</option>
-    			<option align="center" value="2286">Pumas de la UNAM</option>
-    			<option align="center" value="2290">Querétaro</option>
-    			<option align="center" value="2285">Santos Laguna</option>
-   				<option align="center" value="2279">Tigres de la UANL</option>
-    			<option align="center" value="2280">Tijuana</option>
-    			<option align="center" value="2281">Toluca</option>
+			<select name="equipos" id="equipo" [(ngModel)]="equipoSeleccionado">
+				<option align="center" value="5">América</option>
+        		<option align="center" value="6">Atlas</option>
+        		<option align="center" value="16">Atlético de San Luis</option>
+    			<option align="center" value="12">Cruz Azul</option>
+    			<option align="center" value="14">Guadalajara</option>
+    			<option align="center" value="20">Juárez</option>
+    			<option align="center" value="7">León</option>
+    			<option align="center" value="17">Mazatlán</option>
+    			<option align="center" value="13">Monterrey</option>
+    			<option align="center" value="18">Necaxa</option>
+    			<option align="center" value="19">Pachuca</option>
+    			<option align="center" value="11">Puebla</option>
+    			<option align="center" value="15">Pumas de la UNAM</option>
+    			<option align="center" value="21">Querétaro</option>
+    			<option align="center" value="9">Santos Laguna</option>
+   				<option align="center" value="8">Tigres de la UANL</option>
+    			<option align="center" value="22">Tijuana</option>
+    			<option align="center" value="10">Toluca</option>
       </select>
 		</div><br>
-		<input type="button" class="custom-button" value="Seleccionar">
+		<!--<input type="button" class="custom-button" value="Seleccionar">-->
+		<input type="submit" id="button-select" class="custom-button" value="Seleccionar" (click)="selectTeam()"> 
 	</div>
 </div>

@@ -21,6 +21,23 @@ const CREATEUSER = gql`
   }
   `;
 
+const CREATEVOTE = gql`
+  mutation CreateVote($linkId: Int!) {
+    createVote(linkId: $linkId) {
+      user { 
+        id
+        username
+        email
+      }
+      link{
+        id
+        description
+        url
+      }
+    }
+  }
+  `;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -52,5 +69,16 @@ export class GraphqlUsersService {
       });
     
   }
+
+  createVote(linkId: Int16Array) {
+ 
+    return this.apollo.mutate({
+      mutation: CREATEVOTE,
+      variables: {
+        linkId: linkId
+      }
+    });
+  
+}
    
 }
