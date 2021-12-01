@@ -2,22 +2,23 @@
     <h2 id="atras_boton"><a routerLink="">Atrás</a></h2>
     <h2>Regístrate gratis</h2>
     <div class="cajas_registro">
-        <input type="text" id="username_input_regis" placeholder="Usuario">
+        <input type="text" id="username_input_regis" [(ngModel)]="user" placeholder="Usuario">
     </div>
     <div class="cajas_registro">
-        <input type="text" id="password_regis" placeholder="Password">
+        <input type="text" id="password_regis" [(ngModel)]="pass" placeholder="Password">
     </div>
     <div class="cajas_registro">
-        <input type="text" id="repPass_input_regis" placeholder="Repite tu password">
+        <input type="text" id="repPass_input_regis" [(ngModel)]="pass_repite" placeholder="Repite tu password">
     </div>
     <div class="cajas_registro">
-        <input type="text" id="email_input_regis" placeholder="E-mail">
+        <input type="text" id="email_input_regis" [(ngModel)]="mail" placeholder="E-mail">
     </div>    
     <div class="check_class">
-        <input type="checkbox" id="noRobot_input_regis" name="checkRobot" value="robot">
+        <input type="checkbox" id="noRobot_input_regis" name="checkRobot" [(ngModel)]="isChecked" value="robot">
         <label for="checkRobot"> No soy un robot</label>
     </div>
     
-    <button class="usuario-button">Registrarme</button>
+    <!--<button class="usuario-button">Registrarme</button>-->
+    <input type="submit" class="usuario-button" value="Registrarme" (click)="createNewUser()"> 
 
 </body>
