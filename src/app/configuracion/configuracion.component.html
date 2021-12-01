@@ -1,1 +1,64 @@
-<p>configuracion works!</p>
+<header>
+		<div class="row">
+				<div class="column">
+						<h1>Fut Alert</h1>
+						<p class="parrafo-bienvenida">
+								¡Bienvenido!
+						</p>
+				</div>
+				<div class="column">
+						<div class="input_usuario">
+								<input class="cajas_input" type="text" id="username_input" placeholder="Usuario">
+								<button id="button-login" class="usuario-button">Login</button>
+						</div>
+						<div class="input_usuario">
+								<input class="cajas_input" type="text" id="password_input" placeholder="Password">
+								<a routerLink="/registro"> <button class="usuario-button">Regístrate</button> </a>
+						</div>
+				</div>
+		</div>
+</header>
+<ul>
+	<li> <a routerLink=""> Home </a> </li>
+	<li> <a routerLink="configuracion"> Configuración </a> </li>
+	<li><a routerLink="caliente">Caliente.mx</a></li>
+</ul>
+
+<div class="row">
+	<div class="column">
+		<h2> Notificaciones </h2>
+		<input type="checkbox" id="op1" name="op1" value="Juego">
+		<label for="op1"> Cada que juegue mi equipo </label><br>
+		<input type="checkbox" id="op2" name="op2" value="Apuesta">
+		<label for="op2"> Cada que gane una apuesta </label><br>
+		<input type="checkbox" id="op3" name="op3" value="Resultado">
+		<label for="op3"> Resultados de los partidos </label><br>
+		<input type="button" class="custom-button" value="Actualizar">
+	</div>
+	<div class="column">
+		<h2> Elegir mi equipo favorito </h2>
+		<div class="custom-select" align="center">
+			<select name="equipos" id="equipo">
+					<option align="center" value="2287">América</option>
+        	<option align="center" value="2283">Atlas</option>
+        	<option align="center" value="2314">Atlético de San Luis</option>
+    			<option align="center" value="2295">Cruz Azul</option>
+    			<option align="center" value="2278">Guadalajara</option>
+    			<option align="center" value="2298">Juárez</option>
+    			<option align="center" value="2289">León</option>
+    			<option align="center" value="14002">Mazatlán</option>
+    			<option align="center" value="2282">Monterrey</option>
+    			<option align="center" value="2288">Necaxa</option>
+    			<option align="center" value="2292">Pachuca</option>
+    			<option align="center" value="2291">Puebla</option>
+    			<option align="center" value="2286">Pumas de la UNAM</option>
+    			<option align="center" value="2290">Querétaro</option>
+    			<option align="center" value="2285">Santos Laguna</option>
+   				<option align="center" value="2279">Tigres de la UANL</option>
+    			<option align="center" value="2280">Tijuana</option>
+    			<option align="center" value="2281">Toluca</option>
+      </select>
+		</div><br>
+		<input type="button" class="custom-button" value="Seleccionar">
+	</div>
+</div>
