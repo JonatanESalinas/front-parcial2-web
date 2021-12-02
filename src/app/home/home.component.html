@@ -15,12 +15,11 @@
                 <div class="input_usuario">
                     <input class="cajas_input" type="password" id="password_input" placeholder="Password" [(ngModel)]="pass">
                     <a routerLink="/registro"> <button class="usuario-button">Regístrate</button> </a>
-                  </div> 
+                </div>
             </div>
             {{ token }}
         </div>
-      </header>
-      
+    </header>
       <ul>
         <li><a routerLink="">Home</a></li>
         <li><a routerLink="configuracion">Configuración</a></li>
@@ -31,7 +30,7 @@
         <section>
             <!--Tabla general-->
             <h2>Tabla general</h2>
-    
+
             <table id="tabla_general" class="center">
                 <tr>
                     <th>Posición</th>
@@ -51,9 +50,9 @@
             <!--Informacion equipos-->
     <h2 align="center">Información de tu equipo favorito</h2>
         <p align="center">Regístrate para seguir de cerca a tu equipo favorito.</p>
-        <div class="custom-select" align="center">    
-              <h3><div id="nEquipo"></div></h3>
-              <div> <img id="logoEquipo" src="" alt=""> </div>
+        <div class="custom-select" align="center">
+              <h3><div id="nEquipo">{{ miEquipo }}</div></h3>
+              <div> <img id="logoEquipo" src="{{ suLogo }}" alt=""> </div>
               <div id="fundacion"></div>
               <div id="estadio"></div>
               <div id="capacidad"></div>
@@ -64,10 +63,10 @@
         <section>
             <!--contacto-->
             <h2>Galería</h2>
-            <img class="imagenes" id="imag1" width="350" src="">
-            <img class="imagenes" id="imag1" width="320" src="">
-            <img class="imagenes" id="imag1" width="380" src="">
-        
+            <img class="imagenes" id="imag1" width="350" src="{{ imagen1 }}">
+            <img class="imagenes" id="imag1" width="320" src="{{ imagen2 }}">
+            <img class="imagenes" id="imag1" width="380" src="{{ imagen3 }}">
+
             <!--
                 Link imag1:
                     https://naciondeportes.com/wp-content/uploads/2021/08/jornada-7-torneo-grita-mexico-a21-liga-mx.jpeg
@@ -87,8 +86,7 @@
         Víctor Darío Alor López A01731643<br>
         Jesús Orlando Rodríguez Ramírez A01731627<br>
         Jonatan Emanuel Salinas Ávila A01731815<br>
-        Carlos Ignacio Villalobos Sánchez A01731</p>
+        Carlos Ignacio Villalobos Sánchez A01731558</p>
         <p align="center">Proyecto Segundo Parcial - Desarrollo de aplicaciones web</p>
     </footer>
 </body>
-

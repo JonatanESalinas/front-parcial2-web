@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { GraphqlUsersService} from '../graphql.users.service';
 import { Input, EventEmitter, Output, forwardRef, HostListener } from '@angular/core';
 
+//agregamos branch registro
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
