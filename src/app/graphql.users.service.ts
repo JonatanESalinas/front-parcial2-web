@@ -38,6 +38,19 @@ const CREATEVOTE = gql`
   }
   `;
 
+  const QUERYEQUIPOFAV = gql`
+  query {
+    votes{
+      user{
+        username
+      }
+      link{
+        description
+      }
+    }
+  }
+  `;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -83,7 +96,13 @@ export class GraphqlUsersService {
         linkId: linkId
       }
     });
-  
+}
+
+queryEquipoFav() {
+ 
+  return this.apollo.query({
+    query: QUERYEQUIPOFAV,
+  });
 }
    
 }

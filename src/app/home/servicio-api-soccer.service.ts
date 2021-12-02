@@ -19,4 +19,13 @@ export class ServicioApiSoccerService {
       },
     });
   }
+
+  getMyInfo(identif: string): Observable<any>{
+    return this.http.get('https://v3.football.api-sports.io/teams?id=' + identif,{
+      headers:{
+        "x-rapidapi-key": "fda7dd875ffdcfd3ffe354365b2cd465",
+        "x-rapidapi-host": "v3.football.api-sports.io"
+      },
+    });
+  }
 }
