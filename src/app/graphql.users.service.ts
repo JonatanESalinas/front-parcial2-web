@@ -21,6 +21,16 @@ const CREATEUSER = gql`
   }
   `;
 
+const QUERYIMAGES = gql`
+  query {
+    images{
+      id
+      description
+      url
+    }
+  }
+`;
+
 const CREATEVOTE = gql`
   mutation CreateVote($linkId: Int!) {
     createVote(linkId: $linkId) {
@@ -57,6 +67,12 @@ export class GraphqlUsersService {
   
     }
 
+    queryImages(){
+      return this.apollo.query({
+        query: QUERYIMAGES,
+      });
+  
+    } 
   createUser(username: string, email: string, password: string) {
  
       return this.apollo.mutate({
