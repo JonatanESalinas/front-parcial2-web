@@ -23,6 +23,10 @@ export class HomeComponent implements OnInit {
   infoTabla: any;
   arrayEquipos: Array<Equipo> = [];
 
+  imagen1 : string = ""
+  imagen2 : string = ""
+  imagen3 : string = ""
+
   user: string = ""
   userLogeado: string = ""
   pass: string = ""
@@ -54,8 +58,20 @@ export class HomeComponent implements OnInit {
 
       console.log(data);
     });
+    this.carga_galeria();
   }
-
+  carga_galeria(){
+    this.graphqlUsersService.queryImages().subscribe(({ data })=>{
+      
+      this.imagen1 = JSON.parse(JSON.stringify(data)).images[0].url;
+      this.imagen2 = JSON.parse(JSON.stringify(data)).images[1].url;
+      this.imagen3 = JSON.parse(JSON.stringify(data)).images[2].url;
+      //var images1 = images.data.url;
+      console.log(this.imagen1);
+      console.log(this.imagen2);
+      console.log(this.imagen3);
+    });
+  }
   loginUser() {
 
     //alert(this.user + " - " + this.pass);
