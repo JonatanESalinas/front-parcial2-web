@@ -49,6 +49,8 @@ export class HomeComponent implements OnInit {
     this.service.getTablaGeneral().subscribe(data => {
       this.infoTabla = data;
       
+      console.log(data);
+
       for (let i=0; i < 18; i++) {
         this.arrayEquipos[i].posicion = data.response[0].league.standings[0][i].rank;
         this.arrayEquipos[i].logo = data.response[0].league.standings[0][i].team.logo;
@@ -56,7 +58,7 @@ export class HomeComponent implements OnInit {
         this.arrayEquipos[i].puntos = data.response[0].league.standings[0][i].points;
       }
 
-      console.log(data);
+      //console.log(data);
     });
     this.carga_galeria();
   }
