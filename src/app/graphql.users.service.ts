@@ -70,10 +70,15 @@ export class GraphqlUsersService {
     
   }
 
-  createVote(linkId: Int16Array) {
+  createVote(linkId: Int16Array, untoken: string) {
  
     return this.apollo.mutate({
       mutation: CREATEVOTE,
+      context: { 
+        headers: { 
+          Authorization: untoken 
+        } 
+      },
       variables: {
         linkId: linkId
       }
